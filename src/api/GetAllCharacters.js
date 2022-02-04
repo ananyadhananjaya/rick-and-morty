@@ -3,7 +3,6 @@ export const GetAllCharacters = () => {
     .then(res => res.json())
     .then(
       (result) => {
-          console.log(result.results)
         return result.results
       }
     )
