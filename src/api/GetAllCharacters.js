@@ -8,3 +8,10 @@ export const GetAllCharacters = () => {
     )
     .catch(e => console.log(e))
 };
+
+export const GetIndividualCharacter = (id) =>{
+  return fetch(`https://rickandmortyapi.com/api/character/${id}`)
+  .then(res => res.json())
+  .then( res => { return res })
+  .catch(e => console.log(e))
+}
