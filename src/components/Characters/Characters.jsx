@@ -13,19 +13,20 @@ const useStyles = makeStyles({
       height: "100vh",
       width: "100vw"
     },
-    cardContent:{
-      backgroundColor: "#52606D",
-      color: "#E4E7EB",
-    },
+
     card:{
       backgroundColor: "#52606D",
+      '&:hover':{
+        transition: "width 2s"
+      }
     },
     paper:{
      
     },
     font:{
       color: "#E4E7EB",
-    }
+    },
+  
 })
 
 
@@ -49,13 +50,13 @@ const Character = () => {
     {!character ? <Spinner />:(
         <div  className={classes.background} >
            <Grid container  justifyContent="center" alignContent={"center"} style={{height: "100vh", width: "100vw"}}>
-             <Grid item  xs={12} md={8} lg={6}>       
-                  <Card>
+             <Grid item  xs={12} md={8} lg={6}  >       
+                  <Card  >
                     <CardContent className={classes.card} >
                       <Typography gutterBottom variant="h5" className={classes.font} >I am: {character.name}</Typography>
-                      <Typography variant="h6" className={classes.font} >My Id: {character.id}</Typography>
+                      <Typography variant="h6" className={classes.font} >This is my Id: {character.id}</Typography>
                       <Typography variant="h6" className={classes.font}>I was created: {Date(character.created)}</Typography> 
-                     <Typography className={classes.font}>My current status: <Chip label={character.status} sx={{backgroundColor: "#ea8d60", padding:"5px", fontSize: "large", color: "#1e1008", fontWeight:"bold"}}  /> </Typography> 
+                     <Typography variant="h5" className={classes.font}>My current status: <Chip label={character.status} sx={{backgroundColor: "#ea8d60", padding:"5px", fontSize: "large", color: "#1e1008", fontWeight:"bold"}}  /> </Typography> 
                     </CardContent>
                     <CardActions className={classes.card}>
                       <Button><span className={classes.font}>Know more</span></Button>

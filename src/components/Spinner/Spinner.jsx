@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     centererd: {
       height: "100vh",
       width: "100vw",
+      backgroundColor: "#1F2933",
     },
   });
 
@@ -19,7 +20,7 @@ const Spinner = () =>{
       className={classes.centererd}
     >
       <Grid item>
-        <CircularProgress />
+        <CircularProgress  />
       </Grid>
     </Grid>
     )

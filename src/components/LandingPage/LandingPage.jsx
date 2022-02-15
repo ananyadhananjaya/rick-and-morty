@@ -86,7 +86,7 @@ export const LandingPage = () => {
 
         <Grid
           container
-          spacing={3}
+          spacing={6}
           justifyContent="center"
           className={classes.standardPadding}
         >
